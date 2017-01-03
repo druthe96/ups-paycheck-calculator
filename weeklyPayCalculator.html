@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Check Calculator</title>
+    <link rel="stylesheet" href="weeklyPayCalculator.css">
+    <script src="weeklyPayCalculator.js"></script>
+</head>
+<body>
+
+<form action="" method="POST" id="formName" name="formName" onsubmit="">
+
+    <div id="week_table_container">
+
+    <table id="week_table" name="week_table">
+
+        <tr id="top_row">
+            <td></td>
+            <th>Hours</th>
+            <th>Minutes</th>
+            <th>Total</th>
+        </tr>
+
+        <tr class="weekDays">
+            <th>Monday</th>
+            <td><input class="hour" type="text" id="mondayHours" name="mondayHours"></td>
+            <td><input type="text" id="mondayMinutes" name="mondayMinutes"></td>
+            <td class="total_align_th" id="mondayTotalOutput">$0.00</td>
+        </tr>
+
+        <tr class="weekDays">
+            <th>Tuesday</th>
+            <td><input class="hour" type="text" id="tuesdayHours" name="tuesdayHours"></td>
+            <td><input type="text" id="tuesdayMinutes" name="tuesdayMinutes"></td>
+            <td class="total_align_th" id="tuesdayTotalOutput">$0.00</td>
+        </tr>
+
+        <tr class="weekDays">
+            <th>Wednesday</th>
+            <td><input class="hour" type="text" id="wednesdayHours" name="wednesdayHours"></td>
+            <td><input type="text" id="wednesdayMinutes" name="wednesdayMinutes"></td>
+            <td class="total_align_th" id="wednesdayTotalOutput">$0.00</td>
+        </tr>
+
+        <tr class="weekDays">
+            <th>Thursday</th>
+            <td><input class="hour" type="text" id="thursdayHours" name="thursdayHours"></td>
+            <td><input type="text" id="thursdayMinutes" name="thursdayMinutes"></td>
+            <td class="total_align_th" id="thursdayTotalOutput">$0.00</td>
+        </tr>
+
+        <tr class="weekDays">
+            <th>Friday</th>
+            <td><input class="hour" type="text" id="fridayHours" name="fridayHours"></td>
+            <td><input type="text" id="fridayMinutes" name="fridayMinutes"></td>
+            <td class="total_align_th" id="fridayTotalOutput">$0.00</td>
+        </tr>
+        
+
+        <tr>
+            <th></th>
+            <td></td>
+            <th></th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th class="left_align_th"><label for="hourlyWage">Hourly Wage</label></th>
+            <td><input type="text" id="hourlyWage" name="hourlyWage"></td>
+            <th>Gross Amount:</th>
+            <td class="total_align_th" id="weekGrossTotal">$0.00</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <th>Tax Deductable:</th>
+            <td class="total_align_th" id="taxDeductable">-$0.00</td>
+        </tr>
+
+        <tr>
+            <th class="left_align_th"><label for="taxPercentage">Tax Percentage</label></th>
+            <td><input type="text" id="taxPercentage" name="taxPercentage"></td>
+            <th>Net Amount:</th>
+            <td class="total_align_th" id="netTotalContainer">$0.00</td>
+        </tr>
+
+        <tr>
+            <td></td>
+        </tr>
+
+        <tr>
+           <td></td> 
+           <td></td> 
+           <td>
+               <input class="buttons" type="button" value="Submit" onclick="calculatePaycheck(document.getElementById('mondayHours').value,
+                                                 document.getElementById('mondayMinutes').value,
+                                                 document.getElementById('tuesdayHours').value,
+                                                 document.getElementById('tuesdayMinutes').value,
+                                                 document.getElementById('wednesdayHours').value,
+                                                 document.getElementById('wednesdayMinutes').value,
+                                                 document.getElementById('thursdayHours').value,
+                                                 document.getElementById('thursdayMinutes').value,
+                                                 document.getElementById('fridayHours').value,
+                                                 document.getElementById('fridayMinutes').value,
+                                                 document.getElementById('hourlyWage').value)">
+            </td>
+            <td>
+                <input class="buttons" type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+
+
+    </div>
+
+</form>
+
+<div id="output-container">
+
+    <div id="calculationOutput">
+        <p id="answer"></p>
+    </div>
+
+</div>
+
+</body>
+</html>

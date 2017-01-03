@@ -1,0 +1,61 @@
+body {
+    background-color: whitesmoke;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div#week_table_container {
+    background-color: #c4dfe6;
+    height: 470px;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+table#week_table {
+    font-size: 1.1em;
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 4px;
+    height: 30px;
+
+}
+
+tr {
+    text-align: center;
+ 
+}
+
+td {
+    width: 100px;
+}
+
+input {
+    font-size: 1.1em;
+    width: 100px;
+    text-align: center;
+    border-color: grey;
+}
+
+input.buttons {
+    width: 100px;
+    height: 30px;
+    background-color: #2a3132;
+    cursor: pointer;
+    color: white;
+    border: none;
+  
+}
+
+tr#top_row {
+    background-color: #2a3132;
+    color: white;
+}
+
+tr.weekDays {
+    background-color: #90afc5;
+}
